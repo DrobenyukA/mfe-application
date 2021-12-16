@@ -9,6 +9,9 @@ const composeEnhancers = (
     // @ts-ignore
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
 ) || compose;
+
 const rootReducer = combineReducers({ session });
+
+export type ApplicationState = ReturnType<typeof rootReducer>;
 
 export default createStore(rootReducer, undefined, composeEnhancers(middleware));

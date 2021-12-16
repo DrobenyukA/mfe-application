@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
+import Authentication from '../Authentication';
+
 const Header = () => (
     <header className="p-3 bg-dark text-white">
         <div className="container-fluid">
@@ -35,10 +37,9 @@ const Header = () => (
                     />
                 </form>
 
-                <div className="text-end">
-                    <button type="button" className="btn btn-outline-light me-2">Login</button>
-                    <button type="button" className="btn btn-warning">Sign-up</button>
-                </div>
+                
+                <Authentication />
+                
             </div>
         </div>
     </header>
